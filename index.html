@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrandStay Hotel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">GrandStay</div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="book-btn" onclick="scrollToBooking()">
+                Book Now
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Welcome to GrandStay Hotel</h1>
+                <p>
+                    Experience comfort, luxury, and unforgettable hospitality.
+                </p>
+                <button onclick="scrollToBooking()">
+                    Reserve Your Stay
+                </button>
+            </div>
+        </section>
+
+        <!-- Rooms -->
+        <section class="rooms" id="rooms">
+            <h2>Our Rooms</h2>
+            <p class="section-text">
+                Choose the perfect room for your stay.
+            </p>
+
+            <div class="room-container">
+
+                <div class="room-card">
+                    <div class="room-image standard"></div>
+                    <div class="room-info">
+                        <h3>Standard Room</h3>
+                        <p>Comfortable room with all essential facilities.</p>
+                        <h4>₹2,500 / night</h4>
+                        <button onclick="selectRoom('Standard Room')">
+                            Select Room
+                        </button>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image deluxe"></div>
+                    <div class="room-info">
+                        <h3>Deluxe Room</h3>
+                        <p>Spacious room with premium amenities.</p>
+                        <h4>₹4,000 / night</h4>
+                        <button onclick="selectRoom('Deluxe Room')">
+                            Select Room
+                        </button>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image suite"></div>
+                    <div class="room-info">
+                        <h3>Luxury Suite</h3>
+                        <p>Elegant suite designed for a luxurious experience.</p>
+                        <h4>₹7,000 / night</h4>
+                        <button onclick="selectRoom('Luxury Suite')">
+                            Select Room
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <div>
+                <h2>About GrandStay</h2>
+                <p>
+                    GrandStay Hotel provides modern rooms, excellent service,
+                    delicious food, and a relaxing atmosphere for both business
+                    and leisure travelers.
+                </p>
+            </div>
+        </section>
+
+        <!-- Booking -->
+        <section class="booking" id="booking">
+            <h2>Book Your Stay</h2>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout">Check-out</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="room">Room Type</label>
+
+                    <select id="room" required>
+                        <option value="">Select a room</option>
+                        <option value="Standard Room">Standard Room</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Luxury Suite">Luxury Suite</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Confirm Booking
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p>© 2026 GrandStay Hotel. All Rights Reserved.</p>
+        <p>Email: info@grandstay.com | Phone: +91 98765 43210</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
